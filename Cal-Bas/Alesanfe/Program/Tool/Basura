@@ -1,0 +1,15 @@
+def Raíces_Cuadradas():
+     A=Easy.Corrector("Introduzca un número: ")
+     intentos=0
+     while True:        
+         if intentos==2:
+             print("Has consumido demasiados intentos. El programa ha finalizado.")
+             break; #rompe el bucle.
+         if A<0:
+             print("No se puede hallar la raíz de un número negativo.")
+             intentos=intentos+1
+             A=Easy.Corrector("Introduzca otro número: ")    
+         if intentos<2 and A>0:
+             B=math.sqrt(A) 
+             print("La raíz cuadrada de" + " " + str(A) + " " + str(B) + ".")
+	         break
